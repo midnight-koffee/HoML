@@ -36,7 +36,7 @@ train_set, test_set = split_train_test(housing, 0.2)
 ## Using Identifiers for Stable Splits
 
 ### 4. `crc32` Hashing
-- **Method:** Use a hash of unique and immutable identifiers to split the data.
+- **Method:** Use a hash of unique and immutable identifiers to split the data. `crc32` is a function which takes some input and spits out a number between 1 and 2**32, and in each instance each number is equally likely to occur.
 - **Advantage:** Maintains consistent splits even when the dataset is updated.
 
 ```python
